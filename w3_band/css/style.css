@@ -21,6 +21,7 @@ html {
     top: 0;
     right: 0;
     left: 0;
+    z-index: 1;
 }
 
 .nav {
@@ -106,14 +107,74 @@ html {
 
 #slider {
     margin-top: 46px;
-    height: 600px;
-    width: 100%;
-    background-color: #f44336;
+    padding-top: 50%;
+    background: url('/w3_band/img/Skyline-Chicago.jpg') top center/ cover no-repeat;
+    position: relative;
 }
 
-#content {
-    height: 1000px;
-    background-color: aqua;
+#slider .information-slider {
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    padding: 48px;
+    width: 100%;
+    text-align: center;
+    /*  
+    transform: translateX(-50%);
+    left: 50%;
+     */
+    /* cachc an giua khac 
+    or
+    right : 0;
+    left : 0 
+     */
+}
+
+#slider .text-titler {
+    font-weight: 400;
+    font-size: 24px;
+}
+
+#slider .subs-titler {
+    font-size: 15px;
+    margin-top: 25px;
+}
+
+
+/* end slider  */
+
+
+/* begin content */
+
+#content {}
+
+#content .section-commpon {
+    width: 800px;
+    padding: 64px 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#content .section-heading {
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-align: center;
+    font-size: 30px;
+}
+
+#content .section-subs-heading {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 25px;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+#content .text-about {
+    font-size: 15px;
+    margin-top: 25px;
+    text-align: justify;
+    line-height: 1.4;
 }
 
 #footer {}
