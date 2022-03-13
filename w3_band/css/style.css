@@ -17,10 +17,22 @@ html {
     width: 100%;
     height: 46px;
     background-color: #000;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.nav {
+    display: inline-block;
+}
+
+.nav,
+.subsnav {
+    list-style-type: none;
 }
 
 .nav li {
-    list-style: none;
     position: relative;
 }
 
@@ -30,14 +42,14 @@ html {
 
 .nav>li>a {
     color: #fff;
+    text-transform: uppercase;
 }
 
 .nav li a {
     text-decoration: none;
     line-height: 46px;
-    text-transform: uppercase;
-    display: block;
     padding: 0 24px;
+    display: block;
 }
 
 .nav>li:hover>a,
@@ -65,11 +77,43 @@ html {
     line-height: 38px;
 }
 
-#slider {
-    height: 600px;
-    width: 100%;
+.nav .nav-down {
+    font-size: 14px;
 }
 
-#content {}
+#header .search-button {
+    float: right;
+}
+
+#header .search-button:hover {
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+#header .header-search {
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 46px;
+    padding: 0 24px;
+    color: #fff;
+}
+
+
+/* end header  */
+
+
+/* begin slider  */
+
+#slider {
+    margin-top: 46px;
+    height: 600px;
+    width: 100%;
+    background-color: #f44336;
+}
+
+#content {
+    height: 1000px;
+    background-color: aqua;
+}
 
 #footer {}
