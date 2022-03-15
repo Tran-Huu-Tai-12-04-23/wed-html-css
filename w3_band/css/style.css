@@ -18,6 +18,30 @@ html {
     color: #fff !important;
 }
 
+.col-input {
+    padding: 12px;
+    border: 1px solid #ccc;
+}
+
+#content .col-place-buy-ticket {
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+}
+
+.col-margin {
+    margin-bottom: 48px;
+}
+
+#content .col-place-buy-ticket:hover {
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+    border: none;
+}
+
 
 /* header ... css begin  */
 
@@ -287,22 +311,84 @@ html {
     line-height: 1.4;
 }
 
-#content .place-buy-ticket {
-    background-color: #000;
-    color: #fff;
-    text-decoration: none;
+
+/* begin contact  */
+
+.contact {
+    padding-top: 48px;
+}
+
+.contact .contact-information {
+    float: left;
+}
+
+.contact-information .contact-text {
     display: inline-block;
-    padding: 10px;
+    font-size: 18px;
+    list-style-type: none;
 }
 
-#content .place-buy-ticket:hover {
-    background-color: #ccc;
-    color: #000;
+.contact-information .contact-text .contact-icon {
+    margin-right: 10px;
+}
+
+.contact-information .contact-text li {
+    padding: 6px;
+}
+
+.contact .contact-input-alone {
+    margin-right: 10px;
+}
+
+.contact .contact-body-input .contact-subs-input {
+    width: 350.45px;
+}
+
+.contact .contact-email-subs {
+    margin-top: 10px;
+}
+
+.contact .contact-email-subs .contact-subs-input {
+    width: 100%;
+}
+
+.contact .contact-body {
+    float: right;
+}
+
+.contact .contact-send {
+    margin-top: 24px;
+    float: right;
+}
+
+.content-contact .map-img-section img {
+    width: 100%;
+}
+
+.footer-body {
+    padding: 64px;
+    text-align: center;
+}
+
+.footer-body .footer-icon-app {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.footer-body .footer-icon-app i {
+    opacity: 0.6;
+}
+
+.footer-body .footer-icon-app i:hover {
+    opacity: 1;
     cursor: pointer;
-    border: none;
 }
 
-#content #footer {}
+.footer-body .footer-title-last a {
+    opacity: 0.6;
+    color: #000;
+    font-size: 14px;
+}
 
 .modal {
     align-items: center;
