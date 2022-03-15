@@ -298,6 +298,8 @@ html {
 #content .place-buy-ticket:hover {
     background-color: #ccc;
     color: #000;
+    cursor: pointer;
+    border: none;
 }
 
 #content #footer {}
@@ -320,6 +322,7 @@ html {
     max-width: calc(100% - 32px);
     min-height: 200px;
     position: relative;
+    animation: modalFadeIn ease 0.7s;
 }
 
 .modal .modal-close {
@@ -394,4 +397,20 @@ html {
     color: #2196F3;
 }
 
-.modal.open {}
+.modal.open {
+    display: flex;
+}
+
+
+/*  tao chuyen dong */
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-140px);
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
