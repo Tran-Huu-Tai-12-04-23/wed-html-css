@@ -8,6 +8,7 @@
 
 html {
     font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
 }
 
 .clear {
@@ -33,6 +34,11 @@ html {
 
 .col-margin {
     margin-bottom: 48px;
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
 }
 
 #content .col-place-buy-ticket:hover {
@@ -81,7 +87,7 @@ html {
 .nav li a {
     text-decoration: none;
     line-height: 46px;
-    padding: 0 24px;
+    padding: 0 16px;
     display: block;
 }
 
@@ -114,8 +120,17 @@ html {
     font-size: 14px;
 }
 
+#header .mobie-menu,
 #header .search-button {
     float: right;
+}
+
+#header .mobie-menu:hover {
+    background-color: #ccc;
+}
+
+#header .header-menu:hover {
+    color: #000;
 }
 
 #header .search-button:hover {
@@ -123,6 +138,7 @@ html {
     cursor: pointer;
 }
 
+#header .header-menu,
 #header .header-search {
     font-size: 20px;
     font-weight: 800;
@@ -182,9 +198,12 @@ html {
 
 #content .section-commpon {
     width: 800px;
+    max-width: 100%;
     padding: 64px 0;
     margin-right: auto;
     margin-left: auto;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 #content .section-heading {
@@ -404,7 +423,7 @@ html {
 
 .modal .modal-container {
     background-color: #fff;
-    width: 900px;
+    width: 800px;
     max-width: calc(100% - 32px);
     min-height: 200px;
     position: relative;

@@ -1,0 +1,23 @@
+/* css in pc  */
+
+@media (min-width: 1024px) {}
+
+
+/* css in tablet */
+
+@media (min-width: 740px) and (max-width: 1023px) {}
+
+
+/* css in mobie */
+
+@media(max-width:450px) {
+    #header {
+        overflow: hidden;
+    }
+    #header .header-search {
+        display: none;
+    }
+    .nav>li {
+        display: block;
+    }
+}
