@@ -1,23 +1,50 @@
 /* css in pc  */
 
-@media (min-width: 1024px) {}
+@media (min-width: 1024px) {
+    #header .mobie-menu {
+        display: none;
+    }
+}
 
 
 /* css in tablet */
 
-@media (min-width: 740px) and (max-width: 1023px) {}
+@media (min-width: 740px) and (max-width: 1023px) {
+    #header .mobie-menu {
+        display: none;
+    }
+}
 
 
 /* css in mobie */
 
-@media(max-width:450px) {
+@media(max-width:740px) {
     #header {
         overflow: hidden;
     }
     #header .header-search {
         display: none;
     }
+    #header .mobie-menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .nav {
+        display: block;
+    }
     .nav>li {
         display: block;
+    }
+    .nav>li:first-child {
+        display: inline-block;
+    }
+    .nav .subsnav {
+        position: initial;
+        background-color: #ccc;
+    }
+    .nav .subsnav a {
+        color: #fff;
+        padding: 0 40px;
     }
 }
