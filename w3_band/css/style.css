@@ -41,6 +41,10 @@ html {
     margin-right: -8px;
 }
 
+.mt-16px {
+    margin-top: 32px;
+}
+
 #content .col-place-buy-ticket:hover {
     background-color: #ccc;
     color: #000;
@@ -291,7 +295,7 @@ html {
 /* begin palce list  */
 
 #content .place-list {
-    margin: 32px -8px 48px -8px;
+    margin: 32px -8px 32px -8px;
 }
 
 #content .place-item {

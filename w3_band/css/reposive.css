@@ -47,4 +47,22 @@
         color: #fff;
         padding: 0 40px;
     }
+    #content .member-item {
+        width: 100%;
+        margin-top: 30px;
+    }
+    #content .member-avratar {
+        width: 60%;
+    }
+    #content .place-item {
+        width: 100%;
+        margin-top: 32px;
+    }
+    .full-width {
+        width: 100%!important;
+        text-align: center!important;
+    }
+    .contact .contact-input-alone {
+        margin: 10px 0;
+    }
 }
