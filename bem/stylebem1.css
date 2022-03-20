@@ -1,0 +1,166 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#toast {
+    display: flex;
+    flex-direction: column;
+    height: 1000px;
+    position: fixed;
+    top: 32px;
+    right: 32px;
+}
+
+.toast {
+    margin: 32px;
+    display: flex;
+    align-items: center;
+    border-left: 4px solid;
+    box-shadow: 0px 5px rgba(0, 0, 0, 0.08);
+    border-radius: 2px;
+    padding: 32px 16px;
+    min-width: 400px;
+    max-width: 6700px;
+    animation: slideIn ease 0.3s, slideOut linear .5s 2s forwards;
+}
+
+
+/* key fram hieu ung truot vao cau thanh thong bao  */
+
+@keyframes slideIn {
+    from {
+        opacity: 0.5;
+        transform: translateX(calc(100% + 32px));
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOut {
+    to {
+        opacity: 0;
+    }
+}
+
+.toast__icon {
+    margin: 16px 16px;
+}
+
+.toast__close {
+    margin: 30px 16px 16px 16px;
+    cursor: pointer;
+}
+
+.toast__close:hover {
+    opacity: 0.7;
+}
+
+.toast__title {
+    font-size: 24px;
+}
+
+.toast__mes {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.toast__body {
+    flex-grow: 1;
+    min-width: 450px;
+    max-width: 600px;
+}
+
+
+/* modifiler */
+
+.toast--success {
+    border-color: #47d864;
+}
+
+.toast__icon--success {
+    background-color: #47d864;
+    border-radius: 50%;
+    color: #fff;
+    padding: 4px;
+}
+
+.toast__icon--info {
+    background-color: #2f86eb;
+    border-radius: 50%;
+    color: #fff;
+    padding: 4px;
+}
+
+.toast--info {
+    border-color: #2f86eb;
+}
+
+.toast__icon--warn {
+    background-color: #ffc021;
+    border-radius: 50%;
+    color: #fff;
+    padding: 4px;
+}
+
+.toast--warn {
+    border-color: #ffc021;
+}
+
+.toast__icon--error {
+    background-color: #ff623d;
+    border-radius: 50%;
+    color: #fff;
+    padding: 4px;
+}
+
+.toast--error {
+    border-color: #ff623d;
+}
+
+
+/* begin btn  */
+
+#btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 1000px;
+}
+
+.btn {
+    margin: 10px;
+    padding: 16px;
+    color: #fff;
+    min-width: 150px;
+    text-align: center;
+}
+
+.btn--success {
+    background-color: #47d864;
+    border-radius: 10px;
+}
+
+.btn--info {
+    background-color: #2f86eb;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.btn--warn {
+    background-color: #ffc021;
+    border-radius: 10px;
+}
+
+.btn--error {
+    background-color: #ff623d;
+    border-radius: 10px;
+}

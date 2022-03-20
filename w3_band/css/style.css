@@ -190,6 +190,7 @@ html {
 #slider .subs-titler {
     font-size: 15px;
     margin-top: 25px;
+    text-shadow: 1px 1px black;
 }
 
 
@@ -345,6 +346,14 @@ html {
     float: left;
 }
 
+.contact .contact-information a {
+    opacity: 0.8;
+}
+
+.contact .contact-information a:hover {
+    opacity: 1;
+}
+
 .contact-information .contact-text {
     display: inline-block;
     font-size: 18px;
@@ -398,8 +407,13 @@ html {
     margin-bottom: 20px;
 }
 
+.footer-body .footer-icon-app a {
+    text-decoration: none;
+}
+
 .footer-body .footer-icon-app i {
     opacity: 0.6;
+    color: #000;
 }
 
 .footer-body .footer-icon-app i:hover {

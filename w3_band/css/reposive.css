@@ -60,9 +60,41 @@
     }
     .full-width {
         width: 100%!important;
+    }
+    .center-item {
         text-align: center!important;
     }
     .contact .contact-input-alone {
         margin: 10px 0;
+    }
+    .contact-information .contact-text {
+        margin-bottom: 30px;
+    }
+    .contact .contact-send {
+        border-radius: 26px;
+    }
+}
+
+
+/* tablet and mobile  */
+
+@media (max-width: 1023px) {
+    #content .col-place-buy-ticket {
+        padding: 15px 16px;
+    }
+    .col-input {
+        padding: 15px;
+    }
+    .footer-body .footer-icon-app i {
+        margin: 0 8px;
+        font-size: 40px;
+        line-height: 60px;
+    }
+    .footer-title-last {
+        font-size: 40px;
+        padding-top: 10px;
+    }
+    .footer-body .footer-title-last a {
+        font-size: 30px;
     }
 }
