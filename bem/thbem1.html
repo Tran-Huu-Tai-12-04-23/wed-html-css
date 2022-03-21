@@ -13,18 +13,7 @@
 <body>
     <div id="toast">
         <!-- success -->
-        <div class="toast toast--success">
-            <div class="toast__icon toast__icon--success">
-                <i class="ti-check"></i>
-            </div>
-            <div class="toast__body">
-                <h3 class="toast__title">Success</h3>
-                <p class="toast__mes">Máy tính của bạn đã kết nói thành công( windown , linux , unbutu ) </p>
-            </div>
-            <div class="toast__close">
-                <i class="ti-close"></i>
-            </div>
-        </div>
+
         <!-- info -->
         <!-- <div class="toast toast--info">
             <div class="toast__icon toast__icon--info ">
@@ -69,25 +58,151 @@
  -->
 
 
+
         <!-- button begin  -->
 
     </div>
     <div id="btn">
 
-        <div class="btn btn--success">
+        <div class="btn btn--success" onclick="showSuccess()">
             Show Success
         </div>
-        <div class="btn btn--info">
+        <div class="btn btn--info " onclick="showInfo()">
             Show info
         </div>
-        <div class="btn btn--warn">
+        <div class="btn btn--warn " onclick="showWarn()">
             Show warning
         </div>
-        <div class="btn btn--error">
+        <div class="btn btn--error" onclick="showError()">
             Show error
         </div>
 
     </div>
+
+    <script>
+        function toast({
+            titlle = '',
+            mes = ' ',
+            type = '',
+            duration = 3000
+
+        }) {
+            const main = document.getElementById('toast');
+            const toast = document.createElement('div');
+            const remove = setTimeout(function() {
+                main.removeChild(toast);
+            }, duration + 500);
+            toast.onclick = function(e) {
+                if (e.target.closest('.toast__close')) {
+                    main.removeChild(toast);
+                    clearTimeout(remove);
+
+                }
+            }
+
+            const icons = {
+                success: 'ti-check',
+                info: 'ti-info',
+                warn: 'ti-help',
+                error: 'ti-close'
+            }
+            const typeIcons = {
+                success: 'toast__icon--success',
+                info: 'toast__icon--info',
+                warn: 'toast__icon--warn',
+                error: 'toast__icon--error'
+            }
+
+            const borderColors = {
+                success: 'toast--success',
+                info: 'toast--info',
+                warn: 'toast--warn',
+                error: 'toast--error'
+            }
+            const typeIcon = typeIcons[type]
+            const icon = icons[type]
+            const delay = (duration / 1000).toFixed(2)
+            const borderColor = borderColors[type]
+
+
+
+
+            toast.classList.add('toast');
+            toast.classList.add(borderColor);
+            toast.style.animation = 'slideIn ease 0.3s, slideOut linear .5s ${delay}s forwards';
+            toast.innerHTML = `
+
+                <div class="toast__icon ${typeIcon}">
+                    <i class="${icon}"></i>
+                </div>
+                <div class="toast__body">
+                    <h3 class="toast__title">${titlle}</h3>
+                    <p class="toast__mes">${mes}</p>
+                </div>
+                <div class="toast__close">
+                    <i class="ti-close "></i>
+                </div>
+            
+            
+                `;
+            main.append(toast);
+
+
+            /*  const close = document.querySelector('.toast__close')
+             console.log(close)
+
+             function closeToast() {
+                 main.remove(toast);
+                 clearTimeout(remove);
+
+             }
+             close.addEventListener('click', closeToast) */
+
+        }
+
+
+        function showSuccess() {
+            toast({
+                titlle: 'Thành công !',
+                mes: 'Bạn đã đăng nhập thành công ..... ',
+                type: 'success',
+                ducration: 500
+            });
+            var toastIcon = document.querySelector('.toast__icon')
+            toastIcon.classList.add('toast__icon--success')
+            console.log(toastIcon)
+        }
+
+        function showInfo() {
+            toast({
+                titlle: 'Thông tin ',
+                mes: 'Chi tiết xem thêm tại facebook THT ',
+                type: 'info',
+                ducration: 500
+            });
+
+        }
+
+        function showWarn() {
+            toast({
+                titlle: 'Đang bao trì bạn nhé .. !',
+                mes: 'Thiết bị đàng bảo trì , bui lòng chờ trong giây lát ',
+                type: 'warn',
+                ducration: 500
+            });
+
+        }
+
+        function showError() {
+            toast({
+                titlle: 'Xảy ra lỗi !',
+                mes: 'VUI LÒNG thử lại , tài khoản của bạn không hợp lệ !',
+                type: 'error',
+                ducration: 500
+            });
+
+        }
+    </script>
 </body>
 
 </html>

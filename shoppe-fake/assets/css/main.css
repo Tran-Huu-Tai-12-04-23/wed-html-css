@@ -1,0 +1,64 @@
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+i {
+    color: var(--while-color);
+}
+
+
+/* begin header css  */
+
+.header {
+    height: 12rem;
+    background-image: linear-gradient(0, #f26135, #e92611);
+    font-size: 1.6rem;
+}
+
+.header__navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__navbar-list {
+    margin-top: 4px;
+    padding: 0;
+}
+
+.header__navbar-item {
+    position: relative;
+    display: inline-block;
+}
+
+.header__navbar-item-link,
+.header__navbar-item {
+    color: var(--while-color);
+}
+
+.header__navbar-item--separate::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0.5rem;
+    border-left: 2px solid #f96c5c;
+    height: 20px;
+}
+
+.item__font-width {
+    font-weight: 800;
+}
+
+.items--hover:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.fa-brands {
+    margin-right: .5rem;
+    font-size: 1.5rem;
+}

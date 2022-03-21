@@ -1,0 +1,37 @@
+:root {
+    --while-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+}
+
+* {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.grid {
+    min-width: 102.4rem;
+    width: 100%;
+    padding: 0 5rem;
+}
+
+.grid_full-width {
+    width: 100%;
+}
+
+.grid_row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.common-point--padding-right {
+    padding-right: 1.5rem;
+}
