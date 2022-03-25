@@ -1,5 +1,6 @@
 a {
     text-decoration: none;
+    color: #000;
 }
 
 li {
@@ -194,7 +195,7 @@ i {
     padding-top: 6px;
 }
 
-. {
+a {
     text-decoration: none;
 }
 
@@ -249,6 +250,10 @@ i {
     font-weight: 800;
 }
 
+.hover-icon:hover {
+    opacity: 0.7;
+}
+
 .hover:hover {
     opacity: 0.7;
     cursor: pointer;
@@ -288,10 +293,11 @@ i {
     height: 18px;
 }
 
-.header__navbar-item-qr:hover .header__qr {
+
+/* .header__navbar-item-qr:hover .header__qr {
     display: block;
     opacity: 1;
-}
+} */
 
 .header__qr:hover {
     display: block;
@@ -315,27 +321,60 @@ i {
 }
 
 
-/* animation */
-
-@keyframes fadein {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-
 /* header notification */
 
 .header__noti {
     position: absolute;
+    margin-top: 1rem;
     top: 120%;
     right: 16px;
     width: 404px;
     background-color: var(--while-color);
     border: 1px solid #d3d3d3;
+    cursor: default;
+    user-select: none;
+    /* Doi trong tam cua animation , bắt đầu từ đâu  */
+    transform-origin: calc(100% - 20px) top;
+    animation: headerNoti ease-in 0.15s;
+    /* nói cho trinhf duyệt biết rằng thay đổi của đối tượng nào  */
+    will-change: transform, opacity;
+    display: none;
+}
+
+.header__noti::before {
+    content: "";
+    border: 20px solid;
+    border-color: transparent transparent var(--while-color) transparent;
+    position: absolute;
+    top: -30px;
+    right: 12px;
+}
+
+.header__noti::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -16px;
+    width: 9rem;
+    height: 20px;
+}
+
+.header__navbar-item:hover .header__noti {
+    display: block;
+}
+
+@keyframes headerNoti {
+    from {
+        transform: scale(0);
+        opacity: 0;
+        /* mo ra tu vi tri 0 , mowr ra tu be  */
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+        /* lon len toi 1  */
+    }
 }
 
 .header__noti-header {
@@ -391,11 +430,226 @@ i {
 }
 
 .header__noti-footer {
-    text-align: center;
+    display: flex;
     padding: 6px;
 }
 
 .header__noti-footer-btn {
     color: #000;
     font-size: 1.4rem;
+    font-weight: 600;
+    font-size: 1.4rem;
+    padding: 4px 0 4px 0;
+    width: 100%;
+    text-align: center;
+}
+
+
+/* modal -- css  */
+
+.header__modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__modal-container {
+    width: 420px;
+    background-color: #fff;
+    padding: 3rem;
+    animation: fadein ease .9s;
+}
+
+@keyframes afdein {
+    from {
+        opacity: 0;
+        transform: translateY(-140rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header__modal-header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 3rem;
+}
+
+.header__modal h3 {
+    font-size: 1.6rem;
+    color: #ee4d2d;
+}
+
+.header__modal-login:hover h3 {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.header__modal--forget-pass:hover,
+.header__modal--help:hover,
+.header__modal-signup:hover,
+.header__modal-login:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.header__modal-signup {
+    font-size: 1.2rem;
+}
+
+.header__modal-user {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.header__modal-pass {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.header__modal-des {
+    position: relative;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 1.4rem;
+}
+
+.header__modal-des::after {
+    content: "";
+    position: absolute;
+    right: 2.6rem;
+    top: 1.8rem;
+    width: 136px;
+    height: 3px;
+    border-top: 1px solid #999;
+    color: #000;
+}
+
+.header__modal-des::before {
+    content: "";
+    position: absolute;
+    left: 2.6rem;
+    top: 1.8rem;
+    width: 136px;
+    height: 3px;
+    border-top: 1px solid #999;
+    color: #000;
+}
+
+.header__modal-icon {
+    display: flex;
+    justify-content: space-between;
+    color: #000;
+}
+
+.modal__icon-p {
+    color: #000;
+}
+
+.modal-icon-face {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 20px 0;
+    border: 1px solid #999;
+    padding: 4px;
+    min-width: 10.6rem;
+    font-size: 1.3rem;
+}
+
+.modal-icon-goole {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 20px 0;
+    border: 1px solid #999;
+    padding: 4px;
+    min-width: 10.6rem;
+    font-size: 1.3rem;
+}
+
+.modal-icon-apple {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 20px 0;
+    border: 1px solid #999;
+    padding: 4px;
+    min-width: 10.6rem;
+    font-size: 1.3rem;
+}
+
+.modal-icon-face:hover {
+    opacity: 0.5;
+}
+
+.modal-icon-goole:hover {
+    opacity: 0.5;
+}
+
+.modal-icon-apple:hover {
+    opacity: 0.5;
+}
+
+.modal-icon-face i {
+    color: #000;
+    font-size: 1.2rem;
+}
+
+.modal-icon-goole i {
+    color: #000;
+    font-size: 1.2rem;
+}
+
+.modal-icon-apple i {
+    font-size: 1.2rem;
+    color: #000;
+}
+
+.header__modal-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__modal--forget-pass {
+    padding-left: 4rem;
+    font-size: 1.5rem;
+}
+
+.header__modal--close {
+    text-transform: uppercase;
+    color: red;
+}
+
+.header__modal--close-2 {
+    text-transform: uppercase;
+    color: red;
+}
+
+.header__modal--close-2:hover,
+.header__modal--close:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.header__modal--help {
+    padding-left: 1rem;
+    color: #ee4d2d;
+}
+
+.header__modal-two {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

@@ -37,10 +37,10 @@
                         </li>
                         <li class="header__navbar-item">Kết nối
                             <a href="" class="navbar__link-facebook">
-                                <i class="fa-brands fa-facebook "></i>
+                                <i class="fa-brands fa-facebook hover-icon"></i>
 
                             </a>
-                            <a href=" " class="navbar--link-instar">
+                            <a href=" " class="navbar--link-instar hover-icon">
                                 <i class="fa-brands fa-instagram"></i>
 
                             </a>
@@ -59,11 +59,11 @@
                                 <ul class="header__noti-list">
                                     <li class="header__noti-block header__noti-item--readed">
                                         <a href="#" class="header__noti-link">
-                                            <img src="https://cf.shopee.vn/file/7a66dbbfe23635a7da38a794674c8dd1_tn" alt="" class="header__noti-img">
+                                            <img src="https://cf.shopee.vn/file/961a864567e06278e4be26180f15f5e7_tn" alt="" class="header__noti-img">
                                             <div class="header__noti-info">
-                                                <span class="header__noti-name">Túi đeo chéo , hàng chuẩn real
+                                                <span class="header__noti-name">Hoàn tiền vào Ví ShopeePay thành công , quý khách đã nhận được voucher ... 
                                                 </span>
-                                                <span class="header__noti-des">Túi đeo chéo , hàn xẻng ( mô tả )
+                                                <span class="header__noti-des">Yêu cầu hoàn tiền cho đơn hàng 220320E95A29NE được chấp nhận. Số tiền hoàn lại ₫122.500 sẽ được chuyển vào tài khoản Ví ShopeePay của bạn.
                                                 </span>
                                             </div>
                                         </a>
@@ -114,12 +114,14 @@
                                 <i class="fa-duotone fa-question "></i> Trợ giúp
                             </a>
                         </li>
-                        <li class="header__navbar-item common-point--padding-right header__navbar-item--separate item__font-width items--hover">Đăng ký</li>
-                        <li class="header__navbar-item item__font-width items--hover">Đăng nhập</li>
+                        <li class="header__navbar-item common-point--padding-right header__navbar-item--separate item__font-width items--hover js-modal__signup">Đăng ký</li>
+                        <li class="header__navbar-item item__font-width items--hover js-modal__login ">Đăng nhập</li>
 
                     </ul>
                 </nav>
             </div>
+
+
         </header>
 
         <div class="container">
@@ -129,7 +131,169 @@
         <footer class="footer">
 
         </footer>
+        <!-- bgin header modal sign -->
+        <div class="header__modal close">
+            <div class="header__modal-container js-header__sign-modal">
+                <div class="header__modal-header">
+                    <h3 class="header__modal-login">Sign up</h3>
+                    <h4 class="header__modal-signup js-login-in">Login</h4>
+                </div>
+                <div class="header__modal-input">
+                    <input type="text" class="header__modal-user grid_full-width" placeholder="Email/Phone numbers/User name">
+                    <input type="text" class="header__modal-pass grid_full-width" placeholder="Passwords">
+
+                </div>
+                <div class="header__modal-des">
+                    <h3>Or</h3>
+                </div>
+                <div class="header__modal-icon">
+                    <a href="#" class="modal-icon-face">
+                        <i class="fa-brands fa-facebook">
+                                    </i>
+                        <p class="modal__icon-p">
+                            Facebook
+                        </p>
+                    </a>
+                    <a href="#" class="modal-icon-goole">
+                        <i class="fa-brands fa-google">
+                                    </i>
+                        <p class="modal__icon-p">
+                            Google
+                        </p>
+                    </a>
+
+                    <a href="#" class="modal-icon-apple">
+                        <i class="fa-brands fa-apple">
+                                    
+                                </i>
+                        <p class="modal__icon-p">
+                            Apple
+                        </p>
+                    </a>
+
+
+                </div>
+                <div class="header__modal-footer">
+                    <!-- <a href="#" class="header__modal--forget-pass">Forget passwords</a> -->
+                    <a href="#" class="header__modal--forget-close js-modal__close">Close</a>
+                    <a href="" class="header__modal--help">Need help?</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="header__modal-two  close">
+            <div class="header__modal-container js-header__sign-modal-two">
+                <div class="header__modal-header">
+                    <h3 class="header__modal-login">Login</h3>
+                    <h4 class="header__modal-signup js-sign-in">Sign up</h4>
+                </div>
+                <div class="header__modal-input">
+                    <input type="text" class="header__modal-user grid_full-width" placeholder="Email/Phone numbers/User name">
+                    <input type="text" class="header__modal-pass grid_full-width" placeholder="Passwords">
+
+                </div>
+                <div class="header__modal-des">
+                    <h3>Or</h3>
+                </div>
+                <div class="header__modal-icon">
+                    <a href="#" class="modal-icon-face">
+                        <i class="fa-brands fa-facebook">
+                                    </i>
+                        <p class="modal__icon-p">
+                            Facebook
+                        </p>
+                    </a>
+                    <a href="#" class="modal-icon-goole">
+                        <i class="fa-brands fa-google">
+                                    </i>
+                        <p class="modal__icon-p">
+                            Google
+                        </p>
+                    </a>
+
+                    <a href="#" class="modal-icon-apple">
+                        <i class="fa-brands fa-apple">
+                                    
+                                </i>
+                        <p class="modal__icon-p">
+                            Apple
+                        </p>
+                    </a>
+
+
+                </div>
+                <div class="header__modal-footer">
+                    <a href="#" class="header__modal--close js-modal__close2">Close</a>
+                    <a href="#" class="header__modal--forget-pass">Forget passwords</a>
+
+                    <a href="" class="header__modal--help">Need help?</a>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <script>
+        const openSignUp = document.querySelector('.js-modal__signup')
+        const signUpModal = document.querySelector('.js-header__sign-modal')
+        const closeSignup = document.querySelector('.js-modal__close')
+        const modal = document.querySelector('.header__modal')
+
+
+
+
+        function showModalSignup() {
+            modal.classList.remove('close')
+        }
+
+        function closeModalSignUp() {
+            modal.classList.add('close')
+        }
+
+        openSignUp.addEventListener('click', showModalSignup)
+        closeSignup.addEventListener('click', closeModalSignUp)
+        modal.addEventListener('click', closeModalSignUp)
+
+        /* Ngăn tính nỗi bọt của các the modal cha  */
+        signUpModal.addEventListener('click', function(event) {
+            event.stopPropagation()
+        })
+
+
+        const openLogin = document.querySelector('.js-modal__login')
+        const closeLogin = document.querySelector('.js-modal__close2')
+
+        const modal2 = document.querySelector('.header__modal-two')
+        const loginModal = document.querySelector('.js-header__sign-modal-two')
+
+        closeLogin.addEventListener('click', closeModalLogin)
+        openLogin.addEventListener('click', showModalLogin)
+        modal2.addEventListener('click', closeModalLogin)
+        loginModal.addEventListener('click', stopCloseModal)
+
+        /* ham  */
+        function stopCloseModal(event) {
+            event.stopPropagation()
+        }
+
+
+        function showModalLogin() {
+            modal2.classList.remove('close')
+        }
+
+        function closeModalLogin() {
+            modal2.classList.add('close')
+        }
+        /* bat qua laij giua form dang ki va form dang nhap*/
+        const loginIn = document.querySelector('.js-login-in')
+
+        loginIn.addEventListener('click', showModalLogin)
+        loginIn.addEventListener('click', closeModalSignUp)
+
+        const signIn = document.querySelector('.js-sign-in')
+
+        signIn.addEventListener('click', showModalSignup)
+        signIn.addEventListener('click', closeModalLogin)
+    </script>
 </body>
 
 </html>

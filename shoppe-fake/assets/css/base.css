@@ -36,3 +36,22 @@ html {
 .common-point--padding-right {
     padding-right: 1.5rem;
 }
+
+
+/* animation */
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* đống mở đang nhâpj và đang kí  */
+
+.close {
+    display: none!important;
+}
