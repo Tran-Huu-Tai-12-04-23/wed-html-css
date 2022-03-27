@@ -141,6 +141,7 @@ i {
     width: 404px;
     background-color: var(--while-color);
     border: 1px solid #d3d3d3;
+    z-index: 1;
 }
 
 .header__noti-header {
@@ -214,6 +215,7 @@ i {
     height: 12rem;
     background-image: linear-gradient(0, #f26135, #e92611);
     font-size: 1.6rem;
+    min-width: 102.4rem;
 }
 
 .header__navbar {
@@ -457,13 +459,15 @@ i {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 }
 
 .header__modal-container {
     width: 420px;
     background-color: #fff;
     padding: 3rem;
-    animation: fadein ease .9s;
+    animation: fadein linear .9s;
+    border-radius: 5px;
 }
 
 @keyframes afdein {
@@ -488,6 +492,12 @@ i {
     color: #ee4d2d;
 }
 
+.header__modal-login {
+    font-size: 1.6rem;
+    color: #ee4d2d;
+    text-transform: uppercase;
+}
+
 .header__modal-login:hover h3 {
     cursor: pointer;
     opacity: 0.5;
@@ -503,6 +513,7 @@ i {
 
 .header__modal-signup {
     font-size: 1.2rem;
+    text-transform: uppercase;
 }
 
 .header__modal-user {
@@ -520,6 +531,7 @@ i {
     text-align: center;
     padding-top: 10px;
     font-size: 1.4rem;
+    text-transform: uppercase;
 }
 
 .header__modal-des::after {
@@ -550,7 +562,7 @@ i {
     color: #000;
 }
 
-.modal__icon-p {
+.modal__icon-pp {
     color: #000;
 }
 
@@ -562,6 +574,11 @@ i {
     padding: 4px;
     min-width: 10.6rem;
     font-size: 1.3rem;
+    background-color: #1877f2;
+}
+
+.modal__icon-p {
+    color: var(--while-color);
 }
 
 .modal-icon-goole {
@@ -597,12 +614,12 @@ i {
 }
 
 .modal-icon-face i {
-    color: #000;
     font-size: 1.2rem;
+    line-height: 1.3rem;
 }
 
-.modal-icon-goole i {
-    color: #000;
+.modal-icon-goole>i {
+    color: var(--black-color);
     font-size: 1.2rem;
 }
 
@@ -617,8 +634,8 @@ i {
 }
 
 .header__modal--forget-pass {
-    padding-left: 4rem;
-    font-size: 1.5rem;
+    padding-left: 2.6rem;
+    font-size: 1.2rem;
 }
 
 .header__modal--close {
@@ -652,4 +669,127 @@ i {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
+}
+
+
+/* btn login , sign in  */
+
+.modal__btn {
+    border: none;
+    padding: 6px 16px 6px 16px;
+    width: 100%;
+    background-color: #ee4d2d;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.modal__btn:hover {
+    opacity: 0.8;
+}
+
+
+/* oo search trong phan header cua shop */
+
+.header__info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.header__icon-shop {
+    color: #fff;
+    font-size: 5rem;
+}
+
+.header__info-icon-shop {
+    display: flex;
+    line-height: 11rem;
+    color: #fff;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.header__info-p {
+    word-spacing: 4px;
+    margin-left: 10px;
+}
+
+.fa-solid.fa-bag-shopping.header__icon-shop {
+    line-height: 8.3rem;
+}
+
+.header__form-search {
+    display: flex;
+    line-height: 8.3rem;
+    width: 100%;
+}
+
+.header__info-input {
+    margin-top: 8px;
+    padding: 1.5rem;
+    border: #ccc;
+    width: 100%;
+    outline: none;
+}
+
+.header__info-search {
+    width: 80%;
+    align-items: center;
+}
+
+.header__info-icon-search:hover {
+    background-color: #d36d59;
+    cursor: pointer;
+}
+
+.header__info-icon {
+    line-height: 8.3rem;
+}
+
+.header__info-icon-search {
+    color: #fff;
+    background-color: #EE4D2D;
+    border-radius: 4px;
+    font-size: 2.8rem;
+    border: 4px solid #fff;
+    line-height: 8.3rem;
+    padding: 0.7rem 2rem 0.2rem 2rem;
+    margin-top: 20px;
+    border-radius: 0;
+}
+
+.header__info-buy {
+    line-height: 8rem;
+    width: 8rem;
+    margin-top: 8px;
+    font-size: 2.4rem;
+}
+
+
+/* phan goi i mua do cua header  */
+
+.header__search-main {
+    display: flex;
+    width: 70%;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.header__suggest {
+    position: absolute;
+    left: 0;
+    top: 70%;
+    display: flex;
+}
+
+.header__suggest a {
+    color: var(--while-color);
+    font-size: 1.2rem;
+    margin-right: 20px;
+}
+
+.header__suggest a:hover {
+    opacity: 0.8;
 }

@@ -16,12 +16,13 @@ html {
     line-height: 1.6rem;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+    user-select: none;
 }
 
 .grid {
-    min-width: 102.4rem;
+    min-width: 119.2rem;
     width: 100%;
-    padding: 0 5rem;
+    padding: 0 10% 0 10%;
 }
 
 .grid_full-width {
@@ -54,4 +55,11 @@ html {
 
 .close {
     display: none!important;
+}
+
+
+/* margin left  */
+
+.margin__common {
+    margin-left: 20px;
 }

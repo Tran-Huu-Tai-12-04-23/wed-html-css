@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/icon/font/fontawesome-free-6.1.0-web/css/all.min.css">
     <title>SHOPPE-FAKE</title>
+    <link rel="icon" href="./assets/icon/lazada.png" type="image/x-icon" />
 </head>
 
 <body>
@@ -105,20 +106,71 @@
                                     </li>
                                 </ul>
                                 <footer class="header__noti-footer">
-                                    <a href="" class="header__noti-footer-btn">Xem tất cả </a>
+                                    <a href="" class="header__noti-footer-btn">Show all</a>
                                 </footer>
                             </div>
                         </li>
                         <li class="header__navbar-item common-point--padding-right ">
                             <a href="" class="header__navbar-item-link hover">
-                                <i class="fa-duotone fa-question "></i> Trợ giúp
+                                <i class="fa-duotone fa-question "></i>Help
                             </a>
                         </li>
-                        <li class="header__navbar-item common-point--padding-right header__navbar-item--separate item__font-width items--hover js-modal__signup">Đăng ký</li>
-                        <li class="header__navbar-item item__font-width items--hover js-modal__login ">Đăng nhập</li>
+                        <li class="header__navbar-item common-point--padding-right header__navbar-item--separate item__font-width items--hover js-modal__signup">Sign in</li>
+                        <li class="header__navbar-item item__font-width items--hover js-modal__login ">Login</li>
 
                     </ul>
+
                 </nav>
+
+            </div>
+            <div class="grid">
+                <div class="header__info">
+                    <div class="header__info-icon-shop">
+                        <i class="fa-solid fa-bag-shopping header__icon-shop"></i>
+                        <p class="header__info-p">
+                            Shoppe-Fake
+                        </p>
+                    </div>
+                    <div class="header__search-main">
+                        <div class="header__form-search">
+
+                            <div class="header__info-search">
+                                <input type="text" class="header__info-input " placeholder="Nhập mã 253LUONGVE10K giảm 10K">
+                            </div>
+
+                            <div class="header__info-icon">
+                                <i class="fa-solid fa-magnifying-glass header__info-icon-search"></i>
+                            </div>
+                        </div>
+
+                        <div class="header__search-subs">
+                            <div class="header__suggest">
+                                <a href="" class="header__sugggest-p">
+                                    <p>Switch Bàn Phím</p>
+                                </a>
+                                <a href="" class="header__sugggest-p">
+                                    <p>Cặp Máy Tính Xách Tay</p>
+                                </a>
+                                <a href="" class="header__sugggest-p">
+                                    <p>CASIO Nam Chính Hãng</p>
+                                </a>
+                                <a href="" class="header__sugggest-p">
+                                    <p>Laptop Sony Vaio</p>
+                                </a>
+                                <a href="" class="header__sugggest-p">
+                                    <p>Điện Thoại LG</p>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="header__info-buy  ">
+                        <i class="fa-solid fa-cart-shopping
+                        header__info-icon-cart "></i>
+                    </div>
+
+                </div>
             </div>
 
 
@@ -131,17 +183,21 @@
         <footer class="footer">
 
         </footer>
+
         <!-- bgin header modal sign -->
         <div class="header__modal close">
             <div class="header__modal-container js-header__sign-modal">
                 <div class="header__modal-header">
-                    <h3 class="header__modal-login">Sign up</h3>
+                    <h3 class="header__modal-login">Sign in</h3>
                     <h4 class="header__modal-signup js-login-in">Login</h4>
                 </div>
                 <div class="header__modal-input">
                     <input type="text" class="header__modal-user grid_full-width" placeholder="Email/Phone numbers/User name">
-                    <input type="text" class="header__modal-pass grid_full-width" placeholder="Passwords">
+                    <input type="password" class="header__modal-pass grid_full-width" placeholder="Password">
 
+                </div>
+                <div class="header__modal-login-complete">
+                    <button class="modal__btn">Sign Up</button>
                 </div>
                 <div class="header__modal-des">
                     <h3>Or</h3>
@@ -157,7 +213,7 @@
                     <a href="#" class="modal-icon-goole">
                         <i class="fa-brands fa-google">
                                     </i>
-                        <p class="modal__icon-p">
+                        <p class="modal__icon-pp">
                             Google
                         </p>
                     </a>
@@ -166,7 +222,7 @@
                         <i class="fa-brands fa-apple">
                                     
                                 </i>
-                        <p class="modal__icon-p">
+                        <p class="modal__icon-pp">
                             Apple
                         </p>
                     </a>
@@ -189,8 +245,11 @@
                 </div>
                 <div class="header__modal-input">
                     <input type="text" class="header__modal-user grid_full-width" placeholder="Email/Phone numbers/User name">
-                    <input type="text" class="header__modal-pass grid_full-width" placeholder="Passwords">
+                    <input type="password" class="header__modal-pass grid_full-width" placeholder="Password">
 
+                </div>
+                <div class="header__modal-login-complete">
+                    <button class="modal__btn">Login</button>
                 </div>
                 <div class="header__modal-des">
                     <h3>Or</h3>
@@ -206,7 +265,7 @@
                     <a href="#" class="modal-icon-goole">
                         <i class="fa-brands fa-google">
                                     </i>
-                        <p class="modal__icon-p">
+                        <p class="modal__icon-pp">
                             Google
                         </p>
                     </a>
@@ -215,7 +274,7 @@
                         <i class="fa-brands fa-apple">
                                     
                                 </i>
-                        <p class="modal__icon-p">
+                        <p class="modal__icon-pp">
                             Apple
                         </p>
                     </a>
@@ -232,67 +291,7 @@
         </div>
     </div>
 
-    <script>
-        const openSignUp = document.querySelector('.js-modal__signup')
-        const signUpModal = document.querySelector('.js-header__sign-modal')
-        const closeSignup = document.querySelector('.js-modal__close')
-        const modal = document.querySelector('.header__modal')
-
-
-
-
-        function showModalSignup() {
-            modal.classList.remove('close')
-        }
-
-        function closeModalSignUp() {
-            modal.classList.add('close')
-        }
-
-        openSignUp.addEventListener('click', showModalSignup)
-        closeSignup.addEventListener('click', closeModalSignUp)
-        modal.addEventListener('click', closeModalSignUp)
-
-        /* Ngăn tính nỗi bọt của các the modal cha  */
-        signUpModal.addEventListener('click', function(event) {
-            event.stopPropagation()
-        })
-
-
-        const openLogin = document.querySelector('.js-modal__login')
-        const closeLogin = document.querySelector('.js-modal__close2')
-
-        const modal2 = document.querySelector('.header__modal-two')
-        const loginModal = document.querySelector('.js-header__sign-modal-two')
-
-        closeLogin.addEventListener('click', closeModalLogin)
-        openLogin.addEventListener('click', showModalLogin)
-        modal2.addEventListener('click', closeModalLogin)
-        loginModal.addEventListener('click', stopCloseModal)
-
-        /* ham  */
-        function stopCloseModal(event) {
-            event.stopPropagation()
-        }
-
-
-        function showModalLogin() {
-            modal2.classList.remove('close')
-        }
-
-        function closeModalLogin() {
-            modal2.classList.add('close')
-        }
-        /* bat qua laij giua form dang ki va form dang nhap*/
-        const loginIn = document.querySelector('.js-login-in')
-
-        loginIn.addEventListener('click', showModalLogin)
-        loginIn.addEventListener('click', closeModalSignUp)
-
-        const signIn = document.querySelector('.js-sign-in')
-
-        signIn.addEventListener('click', showModalSignup)
-        signIn.addEventListener('click', closeModalLogin)
+    <script src="./assets/js/shoppe.js">
     </script>
 </body>
 
