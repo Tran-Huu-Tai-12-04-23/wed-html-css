@@ -11,6 +11,8 @@ const loginModal = document.querySelector('.js-header__sign-modal-two')
 const loginIn = document.querySelector('.js-login-in')
 const signIn = document.querySelector('.js-sign-in')
 
+/* js header phan subs select in shop */
+
 
 
 
@@ -60,3 +62,5 @@ loginIn.addEventListener('click', closeModalSignUp)
 
 signIn.addEventListener('click', showModalSignup)
 signIn.addEventListener('click', closeModalLogin)
+
+/* js for select in shop and out shop of header css  */
