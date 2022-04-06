@@ -1,0 +1,203 @@
+:root {
+     --gradient-dir1: 45deg;
+     --gradient-dir2: 90deg;
+     --gradient-dir3: -45deg;
+ }
+ 
+ .span {
+     color: rgba(234, 125, 61, 0.8);
+     background-image: linear-gradient(to left top, #fc826c, #ffb52c, #ffc76c);
+     -webkit-background-clip: text;
+     background-clip: text;
+     -webkit-text-fill-color: transparent;
+     font-size: 20;
+ }
+ 
+ .mtk10 {
+     color: rgba(234, 61, 132, 0.8);
+     background-image: linear-gradient(to left top, #fc6c8f, #ff2ced, #ffb86c);
+     -webkit-background-clip: text;
+     background-clip: text;
+     -webkit-text-fill-color: transparent;
+ }
+ 
+ .mtk15 {
+     color: rgba(78, 234, 61, 0.8);
+     background-image: linear-gradient(to left top, #270202, #e27209, #ad1818);
+     -webkit-background-clip: text;
+     background-clip: text;
+     -webkit-text-fill-color: transparent;
+     font-style: italic;
+     animation: runColor ease 3s infinite;
+     font-weight: 800;
+ }
+ 
+ @keyframes runColor {
+     0% {
+         background-image: linear-gradient(to left top, #270202, #e27209, #ad1818);
+         color: #fff;
+         background-position: 0% 50%;
+     }
+     50% {
+         background-position: 100% 50%;
+         background-image: linear-gradient(to left top, #7d0fe4, #e2098f, #ad1824);
+     }
+     100% {
+         background-image: linear-gradient(to left top, #e40f0f, #e27209, #4fad18);
+         background-position: 0% 50%;
+     }
+ }
+ 
+ 
+ /* css for terminal  */
+ 
+ .xterm .xterm-screen canvas {
+     background-color: rgb(210 71 23 / 6%);
+ }
+ 
+ .mtk14 {
+     color: rgba(223, 234, 61, 0.8);
+     background-image: linear-gradient(to left top, #fc6ce4, #2cff4c, #fff06c);
+     -webkit-background-clip: text;
+     background-clip: text;
+     -webkit-text-fill-color: transparent;
+     font-style: oblique;
+ }
+ 
+ .mtk5 {
+     color: transparent;
+     background-image: linear-gradient(var(--gradient-dir1), #e61437, #ae2fe1);
+     background-clip: text;
+     -webkit-text-fill-color: transparent;
+     -webkit-background-clip: text;
+     font-weight: 800;
+     font-size: 20px;
+ }
+ 
+ .mtk16 {
+     color: rgba(88, 150, 255, 1);
+     background-image: linear-gradient(var(--gradient-dir1), #d66efd, #6a5af9);
+     background-clip: text;
+     -webkit-text-fill-color: transparent;
+     -webkit-background-clip: text;
+ }
+ 
+ .mtk9,
+ .mtk17 {
+     color: transparent;
+     background-image: linear-gradient(to right top, #0072ff, #d8ff2c);
+     background-clip: text;
+     -webkit-text-fill-color: transparent;
+     -webkit-background-clip: text;
+ }
+ 
+ .mtk18 {
+     color: transparent;
+     background-image: linear-gradient(var(--gradient-dir2), #e682ff 50%, #3d6ef7);
+     background-clip: text;
+     -webkit-text-fill-color: transparent;
+     -webkit-background-clip: text;
+     font-style: italic;
+ }
+ 
+ .mtk3 {
+     color: transparent;
+     background-image: linear-gradient(to right top, #fdec9f, #ffb4dc, #fef0d1);
+     background-clip: text;
+     -webkit-text-fill-color: transparent;
+     -webkit-background-clip: text;
+     font-style: italic;
+ }
+ 
+ .mtk7 {
+     color: transparent;
+     background-image: linear-gradient(to right bottom, #6c92fc, #6cffeb);
+     -webkit-background-clip: text;
+     background-clip: text;
+     -webkit-text-fill-color: transparent;
+     font-style: italic;
+ }
+ 
+ .mtk26 {
+     color: rgb(110, 88, 255);
+ }
+ 
+ 
+ /* Other */
+ 
+ .monaco-workbench .activitybar>.content :not(.monaco-menu)>.monaco-action-bar .action-item.checked .active-item-indicator:before {
+     border: 0;
+     width: 4px;
+     height: 100%;
+     position: absolute;
+     top: 0;
+     left: 0;
+     background-image: linear-gradient(to bottom, #6cf2fc, #2cffca);
+ }
+ 
+ .monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab.active.tab-border-top>.tab-border-top-container {
+     background-image: linear-gradient(to left, #fc6c8f, #ff4c2c);
+     height: 5px;
+ }
+ 
+ .monaco-workbench .activitybar>.content :not(.monaco-menu)>.monaco-action-bar .badge .badge-content {
+     background-image: linear-gradient(var(--gradient-dir2), #fc6c8f, #ff2ced);
+ }
+ 
+ .mtk1 {
+     color: rgb(23, 120, 181);
+     font-style: italic!important;
+ }
+ 
+ .monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab.active.tab-border-top>.tab-border-top-container {
+     background-size: 400% 400%;
+     background-image: linear-gradient( -45deg, #4d0303, #86109d, #a86115, #0c5973, #0c785d, #875a07, #870b7f, #162b97);
+     animation: gradient 5s ease alternate infinite;
+     height: 3px;
+ }
+ 
+ @keyframes gradient {
+     0% {
+         background-position: 0% 50%;
+     }
+     50% {
+         background-position: 100% 50%;
+     }
+     100% {
+         background-position: 0% 50%;
+     }
+ }
+ 
+ 
+ /* css header for vs code  */
+ 
+ .monaco-icon-label-container {
+     animation: aniHeader ease 3s infinite;
+     /* font-size: 30px;
+     padding: 10px;
+     width: 100px; */
+ }
+ 
+ @keyframes aniHeader {
+     0% {
+         color: rgb(229, 224, 233);
+     }
+     50% {
+         color: rgb(157, 154, 172);
+     }
+     100% {
+         color: #605864;
+     }
+ }
+ 
+ 
+ /* .tab .tab-actions-right .sizing-fit .has-icon {
+     height: 100px;
+     z-index: 1000;
+ } */
+ 
+ .editor-container {
+     background-color: #8c038c;
+ }
+ Viết cho
+ 
