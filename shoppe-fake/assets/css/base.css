@@ -1,7 +1,7 @@
 :root {
     --white-color: #fff;
     --black-color: #000;
-    --text-color: #ccc;
+    --text-color: rgb(144, 134, 134);
     --header-color: #999;
     --primary-color: #EE4D2D;
 }
@@ -33,13 +33,35 @@ html {
 .grid__row {
     display: flex;
     flex-wrap: wrap;
-    width: 16.666667%;
+    width: 100%;
+    margin-left: -5px;
+    margin-right: -5px;
 }
 
-.grid__column {
-    display: flex;
-    flex-wrap: wrap;
-    width: calc(100% - 16.666667%);
+.grid__column_2 {
+    /* margin: 5px; */
+    width: 16.666667%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.grid__column_10 {
+    width: 83.3333334%;
+    /*    margin: 5px; */
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.grid__column-2-4 {
+    width: 20%;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.container__navbar {
+    background-color: var(--white-color);
+    margin-right: 10px;
+    padding: 18px;
 }
 
 .common-point--padding-right {
