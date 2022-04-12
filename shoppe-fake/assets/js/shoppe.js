@@ -11,31 +11,13 @@ const loginModal = document.querySelector('.js-header__sign-modal-two')
 const loginIn = document.querySelector('.js-login-in')
 const signIn = document.querySelector('.js-sign-in')
     /* lay nut tim cau san pham trong danh muc content  */
-const heartNo = document.querySelector('.js-heart-no-active')
+const heartNo = document.querySelectorAll('.js-heart-no-active')
 console.log(heartNo)
-const heartYes = document.querySelector('.js-heart-active')
+const heartYes = document.querySelectorAll('.js-heart-active')
 console.log(heartYes)
     /* js header phan subs select in shop */
 
 /* ham xu lis trai tim  */
-function activeHeart() {
-    heartNo.classList.remove('like-no-active')
-    heartNo.classList.add('like-active')
-    heartYes.classList.remove('like-no-active')
-    heartYes.classList.add('like-active')
-}
-
-function noActiveHeart() {
-    heartNo.classList.remove('like-active')
-    heartNo.classList.add('like-no-active')
-    heartYes.classList.remove('like-active')
-    heartYes.classList.add('like-no-active')
-}
-
-heartNo.addEventListener('click', activeHeart)
-heartYes.addEventListener('click', noActiveHeart)
-
-
 
 
 openSignUp.addEventListener('click', showModalSignup)
