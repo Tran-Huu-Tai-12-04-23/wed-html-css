@@ -1,0 +1,57 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: rgb(144, 134, 134);
+    --header-color: #999;
+    --primary-color: #b7869b;
+}
+
+* {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+.grid {
+    display: flex;
+    justify-content: space-between;
+    min-width: 119.2rem;
+    width: 100%;
+    padding: 0 10% 0 10%;
+}
+
+
+/* animation  */
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes runColor {
+    0% {
+        background-color: rgba(188, 123, 149, 0.4);
+        color: #fff;
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+        background-color: rgba(154, 61, 154, 0.6);
+    }
+    100% {
+        background-color: rgba(178, 134, 223, 0.8);
+        background-position: 0% 50%;
+    }
+}

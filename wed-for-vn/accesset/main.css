@@ -1,0 +1,152 @@
+/* header  */
+
+.header {
+    position: fixed;
+    z-index: 1;
+    height: 100px;
+    box-shadow: 0px 2px #888888;
+    border-color: transparent transparent #000 transparent;
+    width: 100%;
+    background-color: rgba(192, 141, 192, 0.6);
+    animation: runColor ease 3s infinite;
+}
+
+.content {
+    background-image: url("./img/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header__heading {
+    color: var(--black-color);
+    font-size: 2rem;
+    line-height: 100px;
+}
+
+.header-icon {
+    display: flex;
+}
+
+.header__list-info {
+    flex-grow: 1;
+}
+
+.header__list-info>ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__list-info ul li:hover a {
+    opacity: 0.6;
+    color: var(--black-color);
+}
+
+.header__list-info li a {
+    color: var(--white-color);
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 100px;
+    text-transform: uppercase;
+    padding: 0 1rem;
+    text-shadow: 1px 1px 0px #fff, 1px 1px 0px rgba(0, 0, 0, 0.15);
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* .header__subsnav li, */
+
+.header__list-info1 {
+    position: relative;
+}
+
+.header__subsnav {
+    width: 300px;
+    position: absolute;
+    bottom: -150%;
+    left: 10px;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    display: none;
+    animation: fadein linear .5s;
+}
+
+.header__list-info1:hover .header__subsnav {
+    display: block;
+}
+
+.header__subsnav li {
+    padding: 1rem;
+    width: 100%;
+    color: var(--white-color);
+    font-size: 1.8rem;
+}
+
+.header__subsnav li:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.header__list-info2 {
+    position: relative;
+}
+
+.header__subsnav2 {
+    position: absolute;
+    bottom: -50%;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    animation: fadein ease-in .5s;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+    display: none;
+}
+
+.header__list-info2:hover .header__subsnav2 {
+    display: flex;
+}
+
+.header__subsnav2 li {
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+.header__list-info3 {
+    position: relative;
+}
+
+.header__list-info4 {
+    position: relative;
+}
+
+.header__subsnav4,
+.header__subsnav3 {
+    position: absolute;
+    top: 70%;
+    right: -10%;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    font-size: 1.8rem;
+    width: 100%;
+    line-height: 50px;
+    border-radius: 4px;
+    text-align: center;
+    padding: 10px;
+    animation: fadein linear .5s;
+    display: none;
+}
+
+.header__list-info4:hover .header__subsnav4,
+.header__list-info3:hover .header__subsnav3 {
+    display: block;
+}
+
+.content {
+    width: 100%;
+    height: 1200px;
+    background-color: #fff;
+}
