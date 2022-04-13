@@ -171,6 +171,7 @@ i {
     border-radius: 4px;
     display: none;
     animation: fadein ease-in .5s;
+    z-index: 1;
 }
 
 .header__qr::before {
@@ -1067,8 +1068,8 @@ i {
     position: absolute;
     right: 50%;
     top: 65%;
-    width: 45rem;
     background-color: var(--white-color);
+    width: 40rem;
     box-shadow: 0px 0.2px #888888;
     font-size: 1.4rem;
     display: none;
@@ -1088,6 +1089,8 @@ i {
 }
 
 .header__info-cart-list-container {}
+
+.header__info-cart-list-content {}
 
 .header__info-cart-list-head {
     font-size: 1.6rem;
@@ -1195,7 +1198,9 @@ i {
 }
 
 .container__heading {
-    font-size: 1.8rem;
+    padding-top: 10px;
+    font-size: 1.6rem;
+    text-transform: uppercase;
 }
 
 .container__subsnav {
@@ -1207,9 +1212,25 @@ i {
     margin-bottom: 14px;
 }
 
-.container__subsnav li:hover {
+.container__subsnav-item {
+    position: relative;
+}
+
+.container__subsnav-item::before {
+    content: "";
+    position: absolute;
+    border-top: 1px solid #e1e1e1;
+    width: 90%;
+    top: -10px;
+}
+
+.container__subsnav-item:first-child::before {
+    display: none;
+}
+
+.container__subsnav li:hover a {
     cursor: pointer;
-    opacity: 0.7;
+    color: var(--primary-color);
 }
 
 .container__subsnav li a {
@@ -1284,7 +1305,7 @@ i {
 .home__control-price {
     font-size: 1.6rem;
     background-color: var(--white-color);
-    width: 230px;
+    width: 20%;
     height: 30px;
     padding: 24px 14px;
     display: flex;
@@ -1337,6 +1358,7 @@ i {
     display: none;
     padding: 10px 14px;
     animation: fadein 0.3s linear;
+    z-index: 1;
 }
 
 .home__control-price:hover .home__control-btn-options {
@@ -1371,11 +1393,26 @@ i {
     opacity: 0.7;
 }
 
+.home_product {
+    margin-bottom: 10px;
+}
+
 .home__product-item {
     background-color: var(--white-color);
     margin-top: 10px;
-    width: 23rem;
+    width: 100%;
     cursor: pointer;
+    position: relative;
+    border-radius: 3px;
+    box-shadow: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, .1);
+    transition: transform linear .1s;
+    will-change: transform;
+    display: block;
+}
+
+.home__product-item:hover {
+    box-shadow: 0 0.1rem 3rem 0 rgba(0, 0, 0, .05);
+    transform: translateY(-2px);
 }
 
 .home__product-item-img {
@@ -1383,6 +1420,8 @@ i {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
 }
 
 .home__product-item-name {
@@ -1404,6 +1443,7 @@ i {
     margin: 10px;
     align-items: baseline;
     flex-wrap: wrap;
+    overflow: hidden;
 }
 
 .home__product-item-price-new {
@@ -1476,10 +1516,75 @@ i {
     justify-content: space-between;
 }
 
-.home__product-item__orgin span {
-    font-size: 1.3rem;
-}
-
 .fa-solid.fa-check {
     color: var(--black-color);
+}
+
+.home__product-item-favourite {
+    position: absolute;
+    top: 10px;
+    left: -4px;
+    color: var(--primary-color);
+    background-color: currentColor;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+    width: 7rem;
+}
+
+.home__product-item-favourite::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -3px;
+    border-left: 3px solid transparent;
+    border-top: 3px solid currentColor;
+    filter: brightness(60%);
+}
+
+i.fa-solid.fa-check {
+    color: var(--white-color);
+    margin-left: 6px;
+    margin-right: 3px;
+}
+
+.home__product-item-favourite-title {
+    color: var(--white-color);
+    line-height: 1.6rem;
+    font-weight: 600;
+}
+
+.home__product-item-sale {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(255, 216, 64, 0.94);
+    width: 40px;
+    height: 36px;
+    color: var(--black-color);
+    text-align: center;
+    color: var(--white-color);
+    font-weight: 600;
+    font-size: 1.4rem;
+    width: 40px;
+    border-top-right-radius: 3px;
+}
+
+.home__product-item-sale-off {
+    color: #ee4d2d;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.8rem;
+}
+
+.home__product-item-sale::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    bottom: -4px;
+    right: 0;
+    left: 0;
+    border-style: solid;
+    border-width: 0 20px 4px;
+    border-color: transparent rgba(255, 216, 64, 0.94) transparent rgba(255, 216, 64, 0.94);
+    ;
 }
