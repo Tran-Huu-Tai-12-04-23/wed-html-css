@@ -323,8 +323,8 @@ a {
 
 .content__items-img {
     margin-top: 100px;
-    width: 35%;
-    height: 70%;
+    width: 500px;
+    height: 600px;
     transition: all .4s ease-in-out;
 }
 
