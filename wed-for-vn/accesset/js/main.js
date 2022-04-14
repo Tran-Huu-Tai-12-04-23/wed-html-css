@@ -44,7 +44,9 @@ itemsImg.forEach((itimg, index) => {
 document.querySelector('#input-content-btn').onclick = function(e) {
 
     let contentToVn = document.querySelector('#input-content')
+
     let content = contentToVn.value;
+    /* realod laij trang  */
 
     /* validate form  */
     let required = document.querySelector('.required');
@@ -75,5 +77,8 @@ document.querySelector('#input-content-btn').onclick = function(e) {
     }
 
 
+    if (content.trim() != '') {
+        location.reload();
 
+    }
 }
