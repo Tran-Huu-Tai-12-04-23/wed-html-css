@@ -38,3 +38,42 @@ itemsImg.forEach((itimg, index) => {
 
 
 /* lang nghe click chuot */
+
+/* goi du lkioeu vao gôle dioc  */
+
+document.querySelector('#input-content-btn').onclick = function(e) {
+
+    let contentToVn = document.querySelector('#input-content')
+    let content = contentToVn.value;
+
+    /* validate form  */
+    let required = document.querySelector('.required');
+    if (content.trim() != '') {
+        let data = {
+            'entry.266544719': content
+        };
+        let queryString = new URLSearchParams(data);
+        queryString = queryString.toString();
+        console.log(queryString)
+
+
+
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSdxO40i-0gywldxoG6UFQSuAbbBqXsKAtr2LTyL8ss_RAvQIw/formResponse', true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.send(queryString);
+
+        required.innerText = '';
+    }
+    let errors = {};
+
+
+    if (content.trim() == '') {
+        errors['content'] = 'Hông được để trống nghe ';
+        contentToVn.parentElement.querySelector('.required').innerText = errors['content'];
+
+    }
+
+
+
+}

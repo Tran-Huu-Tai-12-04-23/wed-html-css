@@ -368,8 +368,65 @@ a {
 }
 
 
+/* input css */
+
+.input {
+    padding-bottom: 20px;
+    background-color: #a46262;
+}
+
+.input-form {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+#input-content {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: 2rem;
+    color: var(--text-color);
+    font-weight: bolid;
+    width: 100%;
+}
+
+.input-btn {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+#input-content-btn {
+    color: var(--white-color);
+    font-size: 2rem;
+    font-weight: bolid;
+    padding: 20px 40px;
+    display: block;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#input-content-btn:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+
 /* footer  */
 
 .footer {
-    height: 1000px;
+    padding: 20px 0;
+    background-color: #a46262;
+}
+
+.footer__license {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #ccc;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.8rem;
 }
