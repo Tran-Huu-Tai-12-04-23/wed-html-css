@@ -6,7 +6,6 @@ const listImg = document.querySelectorAll('.js-img')
 const listMenu = document.querySelectorAll('.js-taskbar')
 const listNav = document.querySelectorAll('.content__navbar-list')
 const listCloumn10 = document.querySelectorAll('.js-column-10')
-console.log(listCloumn10)
 
 /* ham xu li  */
 
@@ -78,7 +77,29 @@ document.querySelector('#input-content-btn').onclick = function(e) {
 
 
     if (content.trim() != '') {
-        location.reload();
-
+        document.getElementById('input-content').value = ""
     }
+}
+
+/* xu ly phan heart hien thi  */
+
+const heartItems = document.querySelectorAll('.js-heart')
+for (const item of heartItems) {
+    const i = 0
+    item.addEventListener('click', function() {
+
+        document.querySelector('.js-heart.active').classList.remove('active')
+
+        heartItems[1].classList.add('active')
+
+
+    })
+}
+
+
+/* hover thẻ btn  */
+
+const btnNo = document.querySelector('.js-form-no')
+btnNo.onmouseover = function() {
+    btnNo.innerHTML = "Có"
 }
