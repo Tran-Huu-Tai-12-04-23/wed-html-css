@@ -98,3 +98,37 @@ html {
 .clear {
     clear: both;
 }
+
+
+/* directional */
+
+.home__product-directional {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.home__product-directional-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home__product-directional-list a {
+    display: block;
+    width: 40px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 1.6rem;
+    margin: 0 20px;
+    font-weight: 600;
+}
+
+.directional--active {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-align: center;
+}
+
+.directional--active:hover {
+    opacity: 0.7;
+}
