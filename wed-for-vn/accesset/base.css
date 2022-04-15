@@ -125,6 +125,12 @@ html {
     display: block!important;
 }
 
+.active__flex {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
 
 /* required  */
 
@@ -134,4 +140,38 @@ html {
     width: 100%;
     text-align: center;
     margin-top: 4px;
+}
+
+.open {
+    display: flex !important;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: rotateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(10%);
+    }
+}
+
+@keyframes showText {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+.position {
+    position: relative;
+}
+
+.grid__full-height {
+    height: 100%;
 }
