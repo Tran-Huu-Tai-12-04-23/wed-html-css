@@ -167,15 +167,10 @@ const navContents = document.querySelectorAll('.content__items-content')
 console.log(navContents)
 
 navNumbers.forEach((item, index) => {
+    const navContent = navContents[index]
     item.onmouseover = function() {
         this.innerHTML = "Bấm Vào Nút Này diiiii"
     }
-    item.onmouseleave = function() {
-        this.innerHTML = "Di vào đi chời ,..."
-    }
-
-    const navContent = navContents[index]
-
     item.onclick = function() {
         if (document.querySelector('.content__items-content.active') != null) {
 
@@ -184,8 +179,14 @@ navNumbers.forEach((item, index) => {
         navContent.classList.add('active')
     }
     item.onmouseleave = function() {
+        this.innerHTML = "Di vào đi chời ,..."
         document.querySelector('.content__items-content.active').classList.remove('active')
     }
+
+
+
+
+
 })
 
 /* an hien noi dung can mi loi muon noi  */
