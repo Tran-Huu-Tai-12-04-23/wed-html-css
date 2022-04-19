@@ -372,7 +372,7 @@ a {
     font-size: 2rem;
     line-height: 4rem;
     font-weight: bold;
-    animation: showText .9s ease-in-out;
+    animation: showText .3s ease-in-out;
 }
 
 .content__items-content {
